@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>7 jquery formulário</title>
+    <link rel="stylesheet" href="estilos/css5.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="index.js"></script>
+</head>
+<body>
+    <section id="section1">
+        <h1>Formulário</h1>
+        <h2>Cálculo sumatorio</h2>
+        <h3>evento click</h3>
+        <form>
+            valor1: <input type="text"><br>
+            valor2: <input type="text"><br>
+            valor3: <input type="text"><br>
+            <input type="button" id="btn1" value="calculo">
+            resultado: <input type="text" id="resultado1" readonly>
+        </form>
+        <hr>
+    </section>
+
+    <section id="section2">
+        <h1>Formulário</h1>
+        <h2>Cálculo sumatorio</h2>
+        <p>+</p>
+        <h4>Modificando background-color con evento focus y vuelve al original con evento blur</h2>
+        <h3>eventos focus y blur</h3>
+        <form>
+            valor1: <input type="text"><br>
+            valor2: <input type="text"><br>
+            valor3: <input type="text"><br>
+            <input type="button" id="btn2" value="calculo">
+            resultado: <input type="text" id="resultado2" readonly>
+        </form>
+        <hr>
+    </section>
+
+    <section id="section3">
+        <h1>Formulário</h1>
+        <h2>Cajas de texto (input) valor val()</h2>
+        <h4>Modificando el valor de una caja de texto mediante la funcion val()</h2>
+        <h3>funcion check()</h3>
+        <p>+</p>
+        <h3>empleando function de JQuery $.isNumeric()</h3>
+        <form>
+            valor1: <input type="text"><br>
+            valor2: <input type="text"><br>
+            valor3: <input type="text"><br>
+            <input type="button" id="btn3" value="calculo">
+            resultado: <input type="text" id="resultado3" readonly>
+        </form>
+        <hr>
+    </section>
+
+    <section id="section3">
+        <h1>Formulário</h1>
+        <h3>(HTML)  &lt input type="radio" name="frutas" value="manzana" &gt Manzana <br></h3>
+        <h3>(JQuery)  var frutas = $('input[name="frutas"]:checked')</h3>
+        <h4>Opcion de botnones attr 'name', propriedad 'checked' y propriedad 'value'</h4>
+        <form>
+            <input type="radio" name="frutas" value="manzana">Manzana <br>
+            <input type="radio" name="frutas" value="platano">Platano <br>
+            <input type="radio" name="frutas" value="naranja">Naranaja <br>
+            <input type="boton" id="boton" value="ok">
+        </form>
+    </section>
+
+    <section id="section4">
+        <h1>Formulário</h1>
+        <h2>casillas de verificación</h2>
+        <p>// $('#visa').is(':checked')</p> 
+        <h3>(HTML) &lt input type="checkbox" id="visa" value="visa" &gt</h3>
+        <h3>(JQuery) if('#visa'.is(':checked')){}</h3>
+        <h4>Esta función devuelve un valor lógico 'cierto' <br> 
+            si la casilla de verificación está marcada, y 'falso' en caso contrario.</h4>
+        <form>
+            <input type="checkbox" id="visa" value="visa"> Pago Visa <br>
+            <input type="boton" id="boton2" value="ok">
+        </form>
+    </section>
+
+    <section id="section5">
+        <h1>Formulário</h1>
+        <h2>Listas de selección JQuery</h2>
+        <h3>
+            <pre>
+                <code>
+// lista de selección
+
+$('#verificar').click(function () {
+
+    var lista_frutas = $('#frutas option:selected');
+
+    // comprobacion de elemento seleccionado
+    if (lista_frutas.length > 0) {
+
+    alert('El elemento selecionado es: ' + lista_frutas.html());
+    alert('El valor del producto seleccionado es: ' + lista_frutas.val())
+
+    } else {
+
+    alert('No se ha seleccioando ninguna fruta');
+    }
+})
+                </code>
+            </pre>
+        </h3>
+        <select id="frutas" size="3">
+            <option value="1.00">Manzana</option>
+            <option value="1.30">Platano</option>
+            <option value="0.95">Naranja</option>
+        </select>
+        <br>
+        <button id="verificar">Verificar</button>
+    </section>
+
+    <section id="section6">
+        <h2>Listas de selección usando each() y $(this) JQuery</h2>
+        <select id="frutas2" size="3">
+            <option value="1.00">Manzana</option>
+            <option value="1.30">Platano</option>
+            <option value="0.95">Naranja</option>
+        </select>
+        <br>
+        <button id="verificacion">Verificar usando this</button>
+    </section>
+
+    <section id="section7">
+        <h1>Importante!!!!</h1>
+        <h2>Seleccionar multiples opciones pressionar ctrl + opciones </h2>
+        <ol>
+            <li>Listas de selección MÚLTIPLE usando each() y $(this) JQuery
+            <li>MULTIPLE: &lt select id="frutas3" size="3" multiple &gt 
+            <li>usando multiple en la tag select permite selecionar mais de una opcion
+        </ol>
+
+        <select id="frutas3" size="3" multiple>
+            <option value="1.00">Manzana</option>
+            <option value="1.30">Platano</option>
+            <option value="0.95">Naranja</option>
+        </select>
+        <br>
+        <input id="verificacion_multiple2" type="button" value="ok">
+    </section>
+
+    <section id="section8">
+        <h2>Agregar opciones a una lista modo 1</h2>
+        <pre>
+// agregado de cada a la matriz de opciones de ña lista
+
+var opciones = lista.prop('options');
+opciones[0] = new Option ('Lunes',0);
+opciones[1] = new Option ('Martes',1);
+opciones[2] = new Option ('Miercoles',2);
+opciones[3] = new Option ('Jueves',3);
+opciones[4] = new Option ('Viernes',4);
+        </pre>
+
+
+        <h2>Agregar opciones a una lista modo 2</h2>
+        <pre>
+// agregado a la lista de dias usando append(), cada dia en el idioma seleccionado
+
+$('#dias').append('&ltoption&gt Lunes &lt/option &gt');
+$('#dias').append('&ltoption&gt Martes &lt/option&gt');
+$('#dias').append('&ltoption&gt Miercoles &lt/option&gt');
+$('#dias').append('&ltoption&gt Jueves &lt/option&gt');
+$('#dias').append('&ltoption&gt Viernes &lt/option&gt');
+        </pre>      
+
+        <select id="dias">
+            <option value="Sabado">Sabado</option>
+            <option value="Domingo">Domingo</option>
+        </select>
+        <br>
+        <input id="add_fruta" type="button" value="add_fruta">
+    </section>
+
+    <section id="section9">
+        <h1>Slecionar Idiomas y actualizar lista</h1>
+        <h2>Importante!!</h2>
+        <ul>
+            <li><span>//diferencia entre $.each() y $().each()</span></li>
+            <li><h3><span>$.each()</span> - recorre los VALORES de la matriz </h3></li>
+            <hr>
+            <li><h3><span>$().each()</span> - recorre los ELEMENTOS en la section la que se invoca </h3></li>
+        </ul>
+        <form>
+            selecionar idioma: 
+                <select id="idiomas">
+                    <option value="0">Castellano</option>
+                    <option value="1">Ingles</option>
+                    <option value="2">Frances</option>
+                </select>
+            <br>
+            Dias:
+                <select id="dias2"></select>
+        </form>
+    </section>
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
