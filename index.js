@@ -183,12 +183,107 @@ function inicio(){
         });
     }
 
+
+    //section 10
     // mostrar los dias del nuevo idioma elegido
     $('#idiomas').change(function () {
         // enlace a funcion lista_nueva
         lista_nueva($('#idiomas option:selected').html());
     })
 
+    // validacion a nivel de control
+    function valida_navig(valor) { //funcion de validacion valor vacio
+        return valor.length > 0;
+    }
+    function valida_numerico(valor) { //funcion de validacion numerico
+        return $.isNumeric(valor);
+    }
+    $('#nombre').blur(function(){
+        //recorrengo el valor de la funcion valida_navig
+        if(!valida_navig($(this).val())){
+            $('#err_nombre').show();
+            this.focus();
+        } else $('#err_nombre').hide();
+    });
+    $('#edad').blur(function(ev){
+        if(!valida_numerico($(this).val())){
+            $('#err_edad').show();
+            this.focus();
+        } else $('#err_edad').hide();
+    });
 
-    
+    // section 10
+    function valida_navig(valor) { //funcion de validacion valor vacio
+        return valor.length > 0;
+    }
+    function valida_numerico(valor) { //funcion de validacion numerico
+        return $.isNumeric(valor);
+    }
+
+    function valido(){
+        $('#err_nombre').hide();
+        $('#err_edad').hide();
+        if(!valida_navig($('#nombre').val())){
+            $('#err_nombre').show();
+            return false;
+        } else if (!valida_numerico($('#edad').val())){
+            $('#err_edad').show();
+            return false;
+        } else {
+            return true;
+        }
+    }
+
+    // evento de envio del formulario
+    // cancelacion de submit
+    $('#form-10').submit(function(ev){
+        if(!valido()){
+            ev.preventDefault();
+            alert('Error! Verificar los campos.')
+        }
+    });
+
+
+    // section 11
+    // input nombre and edad required
+    $('#form11 input:not(:submit)').on('invalid', function(){
+        alert(`Fallo en campo ${this.name}`);
+    })
+
+
+    // section 12
+
+    // input nombre required
+    $('#nombre12').blur(function(){
+        if(this.validity.valueMissing){
+            $('#err_nombre12').html("* Campo obligatorio.").show();
+        } else{
+            $('#err_nombre12').html('').hide();
+        }
+    });
+
+    // input edad required
+    $('#edad12').blur(function(){
+        if(this.validity.valueMissing){
+            $('#err_edad12').html('* Campo obligatorio').show();
+        } else if (this.validity.rangeUnderflow){
+            $('#err_edad12').html('* Valor muy bajo').show();
+        } else if (this.validity.rangeOverflow){
+            $('#err_edad12').html('* Valor muy alto').show();
+        } else {
+            $('#err_edad12').html('').hide();
+        }
+    });
+
+    // SECTION 13
+
+    $('#form13 input[name="clave"]').change(function(){
+        if($(this).val().length > 8){ // comprobacion de longitud
+            // se excedelos 8 caracteres -> ERROR
+            this.setCustomValidity('Introduzca un valor de max 8 caracteres');
+        } else {
+            // no excede los 8 caracteres -> OK
+            this.setCustomValidity('');
+        }
+    });
 }

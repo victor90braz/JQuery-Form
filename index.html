@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,6 +10,7 @@
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="index.js"></script>
 </head>
+
 <body>
     <section id="section1">
         <h1>Formulário</h1>
@@ -23,44 +25,43 @@
         </form>
         <hr>
     </section>
-
     <section id="section2">
         <h1>Formulário</h1>
         <h2>Cálculo sumatorio</h2>
         <p>+</p>
-        <h4>Modificando background-color con evento focus y vuelve al original con evento blur</h2>
-        <h3>eventos focus y blur</h3>
-        <form>
-            valor1: <input type="text"><br>
-            valor2: <input type="text"><br>
-            valor3: <input type="text"><br>
-            <input type="button" id="btn2" value="calculo">
-            resultado: <input type="text" id="resultado2" readonly>
-        </form>
-        <hr>
+        <h4>
+            Modificando background-color con evento focus y vuelve al original con evento blur</h2>
+            <h3>eventos focus y blur</h3>
+            <form>
+                valor1: <input type="text"><br>
+                valor2: <input type="text"><br>
+                valor3: <input type="text"><br>
+                <input type="button" id="btn2" value="calculo">
+                resultado: <input type="text" id="resultado2" readonly>
+            </form>
+            <hr>
     </section>
-
     <section id="section3">
         <h1>Formulário</h1>
         <h2>Cajas de texto (input) valor val()</h2>
-        <h4>Modificando el valor de una caja de texto mediante la funcion val()</h2>
-        <h3>funcion check()</h3>
-        <p>+</p>
-        <h3>empleando function de JQuery $.isNumeric()</h3>
-        <form>
-            valor1: <input type="text"><br>
-            valor2: <input type="text"><br>
-            valor3: <input type="text"><br>
-            <input type="button" id="btn3" value="calculo">
-            resultado: <input type="text" id="resultado3" readonly>
-        </form>
-        <hr>
+        <h4>
+            Modificando el valor de una caja de texto mediante la funcion val()</h2>
+            <h3>funcion check()</h3>
+            <p>+</p>
+            <h3>empleando function de JQuery $.isNumeric()</h3>
+            <form>
+                valor1: <input type="text"><br>
+                valor2: <input type="text"><br>
+                valor3: <input type="text"><br>
+                <input type="button" id="btn3" value="calculo">
+                resultado: <input type="text" id="resultado3" readonly>
+            </form>
+            <hr>
     </section>
-
     <section id="section3">
         <h1>Formulário</h1>
-        <h3>(HTML)  &lt input type="radio" name="frutas" value="manzana" &gt Manzana <br></h3>
-        <h3>(JQuery)  var frutas = $('input[name="frutas"]:checked')</h3>
+        <h3>(HTML) &lt input type="radio" name="frutas" value="manzana" &gt Manzana <br></h3>
+        <h3>(JQuery) var frutas = $('input[name="frutas"]:checked')</h3>
         <h4>Opcion de botnones attr 'name', propriedad 'checked' y propriedad 'value'</h4>
         <form>
             <input type="radio" name="frutas" value="manzana">Manzana <br>
@@ -69,21 +70,20 @@
             <input type="boton" id="boton" value="ok">
         </form>
     </section>
-
     <section id="section4">
         <h1>Formulário</h1>
         <h2>casillas de verificación</h2>
-        <p>// $('#visa').is(':checked')</p> 
+        <p>// $('#visa').is(':checked')</p>
         <h3>(HTML) &lt input type="checkbox" id="visa" value="visa" &gt</h3>
         <h3>(JQuery) if('#visa'.is(':checked')){}</h3>
-        <h4>Esta función devuelve un valor lógico 'cierto' <br> 
-            si la casilla de verificación está marcada, y 'falso' en caso contrario.</h4>
+        <h4>Esta función devuelve un valor lógico 'cierto' <br>
+            si la casilla de verificación está marcada, y 'falso' en caso contrario.
+        </h4>
         <form>
             <input type="checkbox" id="visa" value="visa"> Pago Visa <br>
             <input type="boton" id="boton2" value="ok">
         </form>
     </section>
-
     <section id="section5">
         <h1>Formulário</h1>
         <h2>Listas de selección JQuery</h2>
@@ -118,7 +118,6 @@ $('#verificar').click(function () {
         <br>
         <button id="verificar">Verificar</button>
     </section>
-
     <section id="section6">
         <h2>Listas de selección usando each() y $(this) JQuery</h2>
         <select id="frutas2" size="3">
@@ -129,16 +128,14 @@ $('#verificar').click(function () {
         <br>
         <button id="verificacion">Verificar usando this</button>
     </section>
-
     <section id="section7">
         <h1>Importante!!!!</h1>
         <h2>Seleccionar multiples opciones pressionar ctrl + opciones </h2>
         <ol>
             <li>Listas de selección MÚLTIPLE usando each() y $(this) JQuery
-            <li>MULTIPLE: &lt select id="frutas3" size="3" multiple &gt 
+            <li>MULTIPLE: &lt select id="frutas3" size="3" multiple &gt
             <li>usando multiple en la tag select permite selecionar mais de una opcion
         </ol>
-
         <select id="frutas3" size="3" multiple>
             <option value="1.00">Manzana</option>
             <option value="1.30">Platano</option>
@@ -147,7 +144,6 @@ $('#verificar').click(function () {
         <br>
         <input id="verificacion_multiple2" type="button" value="ok">
     </section>
-
     <section id="section8">
         <h2>Agregar opciones a una lista modo 1</h2>
         <pre>
@@ -160,8 +156,6 @@ opciones[2] = new Option ('Miercoles',2);
 opciones[3] = new Option ('Jueves',3);
 opciones[4] = new Option ('Viernes',4);
         </pre>
-
-
         <h2>Agregar opciones a una lista modo 2</h2>
         <pre>
 // agregado a la lista de dias usando append(), cada dia en el idioma seleccionado
@@ -171,8 +165,7 @@ $('#dias').append('&ltoption&gt Martes &lt/option&gt');
 $('#dias').append('&ltoption&gt Miercoles &lt/option&gt');
 $('#dias').append('&ltoption&gt Jueves &lt/option&gt');
 $('#dias').append('&ltoption&gt Viernes &lt/option&gt');
-        </pre>      
-
+        </pre>
         <select id="dias">
             <option value="Sabado">Sabado</option>
             <option value="Domingo">Domingo</option>
@@ -180,48 +173,139 @@ $('#dias').append('&ltoption&gt Viernes &lt/option&gt');
         <br>
         <input id="add_fruta" type="button" value="add_fruta">
     </section>
-
     <section id="section9">
         <h1>Slecionar Idiomas y actualizar lista</h1>
         <h2>Importante!!</h2>
         <ul>
             <li><span>//diferencia entre $.each() y $().each()</span></li>
-            <li><h3><span>$.each()</span> - recorre los VALORES de la matriz </h3></li>
+            <li>
+                <h3><span>$.each()</span> - recorre los VALORES de la matriz </h3>
+            </li>
             <hr>
-            <li><h3><span>$().each()</span> - recorre los ELEMENTOS en la section la que se invoca </h3></li>
+            <li>
+                <h3><span>$().each()</span> - recorre los ELEMENTOS en la section la que se invoca </h3>
+            </li>
         </ul>
         <form>
-            selecionar idioma: 
-                <select id="idiomas">
-                    <option value="0">Castellano</option>
-                    <option value="1">Ingles</option>
-                    <option value="2">Frances</option>
-                </select>
+            selecionar idioma:
+            <select id="idiomas">
+                <option value="0">Castellano</option>
+                <option value="1">Ingles</option>
+                <option value="2">Frances</option>
+            </select>
             <br>
             Dias:
-                <select id="dias2"></select>
+            <select id="dias2"></select>
         </form>
     </section>
+    <section id="section10">
+        <h1>Niveles de validación de formularios</h1>
+        <h2>funcion de validacion valor vacio</h2>
+        <p>
+            function valida_navig(valor){
+            return valor.length > 0;
+            }
+        </p>
+        <h2>funcion de validacion numerico</h2>
+        <p>
+            function valida_numerico(valor){
+            return $.isNumeric(valor);
+            }
+        </p>
+        <h2>usuario introducindo valores(evento change), perder el foco(evento blur)</h2>
+        <form id="form-10" method="post">
+            <h3>input nombre (no puede estar vacio)</h3>
+            nombre: <input type="text" id="nombre">
+            <output class="error" id="err_nombre">El nombre no puede ser vacio</output><br>
+            <h3>input edad(obligatorio ser numerico)</h3>
+            edad: <input type="text" id="edad">
+            <output class="error" id="err_edad">La edad debe ser un numero</output><br>
+            <input type="submit" id="btn_envio" value="ENVIAR">
+        </form>
+    </section>
+    <section id="section11">
+        <h1>SECTION 11</h1>
+        <h2>// input nombre and edad required</h2>
+        <p>
+            $('#form11 input:not(:submit)').on('invalid', function(){ <br>
+            alert(`Fallo en campo ${this.name}`); <br>
+            })
+        </p>
+        <form id="form11" name="formulario11" method="get">
+            nombre: <input type="text" id="nombre11" name="nombre" required placeholder="campo obligatorio"><br>
+            edad: <input type="number" id="edad11" name="edad" required placeholder="campo obligatorio"><br>
+            <input type="submit" value="ENVIAR">
+        </form>
+    </section>
+    <section id="section12">
+        <h1>SECTION 12 - formulario oficial</h1>
+        <h2>// input nombre and edad required</h2>
+        <p>
+            this.validity.valueMissing/this.validity.rangeUnderflow/this.validity.rangeOverflow
+        </p>
+        <pre>
+                <code>
+// section 11
+// input nombre and edad required
+$('#form11 input:not(:submit)').on('invalid', function(){
+alert(`Fallo en campo ${this.name}`);
+})
 
-        
 
+// section 12
 
+// input nombre required
+$('#nombre12').blur(function(){
+if(this.validity.valueMissing){
+$('#err_nombre12').html("* Campo obligatorio.").show();
+} else{
+$('#err_nombre12').html('').hide();
+}
+});
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+// input edad required
+$('#edad12').blur(function(){
+if(this.validity.valueMissing){
+$('#err_edad12').html('* Campo obligatorio').show();
+} else if (this.validity.rangeUnderflow){
+$('#err_edad12').html('* Valor muy bajo').show();
+} else if (this.validity.rangeOverflow){
+$('#err_edad12').html('* Valor muy alto').show();
+} else {
+$('#err_edad12').html('').hide();
+}
+});
+                </code>
+            </pre>
+        <form method="get" name="form12" id="formulario12">
+            NOMBRE <input type="text" id="nombre12" name="nombre" required>
+            <output class="error" id="err_nombre12"></output><br>
+            EDAD <input type="number" id="edad12" name="edad" min="18" max="65" required>
+            <output class="error" id="err_edad12"></output><br>
+            <input type="submit" value="Enviar">
+        </form>
+    </section>
+    <section id="section13">
+        <h1>SECTION 13</h1>
+        <p>setCustomValidity('Introduzca un valor de max 8 caracteres')</p>
+        <pre>
+            <code>
+$('#form13 input[name="clave"]').change(function(){ 
+if($(this).val().length > 8){ // comprobacion de longitud 
+// se excedelos 8 caracteres -> ERROR 
+this.setCustomValidity('Introduzca un valor de max 8 caracteres');
+} else { 
+// no excede los 8 caracteres -> OK 
+this.setCustomValidity(''); 
+}
+});
+            </code>
+        </pre>
+        <form id="form13">
+            CLAVE: <input type="text" name="clave">
+            <input type="submit" value="Enviar">
+        </form>
+    </section>
 </body>
+
 </html>
